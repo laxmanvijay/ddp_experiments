@@ -63,7 +63,9 @@ cd ../..
 mkdir imagenet/val && mv ILSVRC2012_img_val.tar imagenet/val/ && cd imagenet/val && tar -xvf ILSVRC2012_img_val.tar
 # rm -f ILSVRC2012_img_val.tar
 
-bash ./imagenet_val_preprocess.sh
+cp ../../imagenet_val_preprocess.sh ./
+
+sh ./imagenet_val_preprocess.sh
 #
 # This results in a validation directory like so:
 #
