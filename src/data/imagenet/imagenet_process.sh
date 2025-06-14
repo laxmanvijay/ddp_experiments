@@ -34,7 +34,8 @@ mkdir imagenet
 # Create train directory; move .tar file; change directory
 mkdir imagenet/train && mv ILSVRC2012_img_train.tar imagenet/train/ && cd imagenet/train
 # Extract training set; remove compressed file
-tar -xvf ILSVRC2012_img_train.tar && rm -f ILSVRC2012_img_train.tar
+tar -xvf ILSVRC2012_img_train.tar 
+# rm -f ILSVRC2012_img_train.tar
 #
 # At this stage imagenet/train will contain 1000 compressed .tar files, one for each category
 #
@@ -59,7 +60,8 @@ cd ../..
 # Extract the validation data and move images to subfolders:
 #
 # Create validation directory; move .tar file; change directory; extract validation .tar; remove compressed file
-mkdir imagenet/val && mv ILSVRC2012_img_val.tar imagenet/val/ && cd imagenet/val && tar -xvf ILSVRC2012_img_val.tar && rm -f ILSVRC2012_img_val.tar
+mkdir imagenet/val && mv ILSVRC2012_img_val.tar imagenet/val/ && cd imagenet/val && tar -xvf ILSVRC2012_img_val.tar
+# rm -f ILSVRC2012_img_val.tar
 
 bash ./imagenet_val_preprocess.sh
 #
